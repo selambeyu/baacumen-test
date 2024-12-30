@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Name: Baacumen Assignment
 
-## Getting Started
+## Setup and Installation
 
-First, run the development server:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/selambeyu/baacumen-test.git
+   ```
+2. **Navigate to the project directory:**
+   ```bash
+   cd baacumen-test
+   ```
+3. **Install dependencies:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Set up the database:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   - Create a `.env` file in the root directory and add your database configuration:
+     ```
+     DATABASE_URL=your_database_url
+     ```
+   - Run the Prisma migrations:
+     ```bash
+     npx prisma migrate dev
+     ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+5. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
+## Features and Functionalities
 
-To learn more about Next.js, take a look at the following resources:
+- **Feature 1:** Display a list of user cards with basic information.
+- **Feature 2:** Search and Filter.
+- **Feature 3:** Detailed User View.
+- **Feature 4:** User list Pagination.
+- **Feature 5:** light and dark mode toggling.
+- **Feature 6:** Description of feature 3.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Additional Tools and Libraries
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Next.js:** The React framework for production.
+- **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+- **TypeScript:** A typed superset of JavaScript that compiles to plain JavaScript.
