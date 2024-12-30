@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-slate-100 dark:bg-gray-800 dark:text-white text-black p-4 flex justify-between items-center">
+    <header className="bg-slate-100 dark:bg-lightBlue dark:text-white text-black p-4 flex justify-between items-center">
       <h1 className="text-xl">Admin Dashboard</h1>
       <button
         onClick={toggleDarkMode}

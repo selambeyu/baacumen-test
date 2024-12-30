@@ -8,7 +8,9 @@ const config: Config = {
   ],
   darkMode: "selector",
   theme: {
-    extend: {},
+    extend: {
+      colors: { darkBlue: "#010124", lightBlue: "#000435" },
+    },
   },
   plugins: [],
 };

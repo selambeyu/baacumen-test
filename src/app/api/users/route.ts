@@ -15,8 +15,12 @@ export async function GET(req: NextRequest) {
       parseInt(limit)
     );
     console.log("users from prisma", users);
-
-    return NextResponse.json({ users, totalUsers }, { status: 200 });
+    const response = NextResponse.json({ users, totalUsers }, { status: 200 });
+    response.headers.set(
+      "Cache-Control",
+      "public, s-maxage=60, stale-while-revalidate=30"
+    );
+    return response;
   } catch (error) {
     console.error("Failed to fetch users", error);
     return NextResponse.json(

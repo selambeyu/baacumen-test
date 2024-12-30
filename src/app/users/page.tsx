@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import UserCard from "../../components/UserCard";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 interface User {
   id: number;
@@ -61,9 +62,7 @@ const UsersPage: React.FC = () => {
         className="mb-4 p-2 border border-gray-300 rounded"
       />
       {loading ? (
-        <div className="flex items-center justify-center  text-center text-2xl font-bold">
-          Loading...
-        </div>
+        <LoadingSpinner />
       ) : users.length > 0 ? (
         <div className="flex flex-wrap gap-4">
           {users.map((user) => (
@@ -76,14 +75,14 @@ const UsersPage: React.FC = () => {
         <button
           onClick={handlePreviousPage}
           disabled={page === 1}
-          className="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
+          className="px-4 py-2 dark:bg-darkBlue bg-gray-300 rounded disabled:opacity-50"
         >
           Previous
         </button>
         <button
           onClick={handleNextPage}
           disabled={page * limit >= totalUsers}
-          className="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
+          className="px-4 py-2 bg-gray-300  dark:bg-darkBlue rounded disabled:opacity-50"
         >
           Next
         </button>

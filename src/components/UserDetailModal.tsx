@@ -39,7 +39,7 @@ const UserDetailModal: React.FC<UserDetailModalProps> = ({
             />
           </svg>
         </div>
-        <h2 className="text-2xl font-bold mb-4">{name}</h2>
+        <h2 className="text-2xl font-bold mb-4 dark:text-white">{name}</h2>
 
         <p className="text-gray-700 mb-2">
           <strong>Email:</strong> {email}

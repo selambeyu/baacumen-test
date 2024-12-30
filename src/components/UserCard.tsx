@@ -15,7 +15,7 @@ const UserCard: React.FC<UserCardProps> = ({ name, email, phone, avatar }) => {
     setIsModalOpen(!isModalOpen);
   };
   return (
-    <div className="flex justify-start gap-4 p-8 max-w-sm rounded-md overflow-hidden shadow-lg bg-white m-4">
+    <div className="flex justify-start gap-4 p-8 max-w-sm rounded-md overflow-hidden shadow-lg bg-white dark:bg-darkBlue m-4 border border-gray-300 dark:border-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -33,7 +33,9 @@ const UserCard: React.FC<UserCardProps> = ({ name, email, phone, avatar }) => {
 
       <div className="text-center space-y-2 sm:text-left">
         <div className="space-y-1">
-          <p className="text-lg font-semibold text-black">{name}</p>
+          <p className="text-lg dark:text-white  font-semibold text-black">
+            {name}
+          </p>
           <p className="text-slate-500 font-medium">{email}</p>
         </div>
         <button
