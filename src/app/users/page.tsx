@@ -53,25 +53,25 @@ const UsersPage: React.FC = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 md:p-4 sm:p-2 xs:p-0">
       <input
         type="text"
         value={search}
         onChange={handleSearchChange}
         placeholder="Search users..."
-        className="mb-4 p-2 border border-gray-300 rounded"
+        className="mb-4 p-2 border border-gray-300 dark:text-black rounded"
       />
       {loading ? (
         <LoadingSpinner />
       ) : users.length > 0 ? (
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 md:gap-2 sm:gap-1">
           {users.map((user) => (
             <UserCard key={user.id} {...user} />
           ))}
         </div>
       ) : null}
 
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-4 ">
         <button
           onClick={handlePreviousPage}
           disabled={page === 1}

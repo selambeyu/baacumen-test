@@ -28,7 +28,7 @@ export default function RootLayout({
           <Sidebar navItems={navItems} />
           <div className="flex-1">
             <Header />
-            <main className="p-4">{children}</main>
+            <main className="p-4 md:p-4 sm:p-1 xs:p-0">{children}</main>
           </div>
         </div>
       </body>
